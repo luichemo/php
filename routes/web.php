@@ -12,6 +12,6 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('{quiz}', [QuizController::class, 'show'])->name('quizzes.show');
-
-
+Route::get('/quizzes/create', [QuizController::class, 'create']);
+Route::get('/quizzes/{id}/edit', [QuizController::class, 'edit']);
+Route::post('/quizzes/{id?}', [QuizController::class, 'store']);
